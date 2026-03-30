@@ -16,9 +16,9 @@ public class Server {
 
     public static void main(String[] args) throws Exception {
 
-        HttpServer server = HttpServer.create(new InetSocketAddress(6080), 0);
+        HttpServer server = HttpServer.create(new InetSocketAddress(8080), 0);
 
-        logger.info("Server starting on port 6080...");
+        logger.info("Server starting on port 8080...");
 
         // ✅ ROOT → Serve HTML (FIXED FOR MAVEN)
         server.createContext("/", exchange -> {
@@ -137,7 +137,7 @@ public class Server {
         });
 
         server.start();
-        logger.info("Server running at http://localhost:6080");
+        logger.info("Server running at http://localhost:8080");
     }
 
     public static Connection getConnection() throws Exception {
